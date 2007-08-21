@@ -1,0 +1,4 @@
+#Should it be developed on a cell phone?
+
+http://sourceforge.net/projects/j2megamingbook/
+http://www.j2meforums.com/wiki/index.php/Development_Tools
