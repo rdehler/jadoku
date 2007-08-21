@@ -1,0 +1,7 @@
+#A description of what hte creator should do
+
+= Details =
+to create a sudoku puzzle you must write a sudoku solver to check
+a) if a solution exists, and b) if the solution is unique
+to do that programmatically, at number added check 
+if there is no solution afterwards, discard that move and try another, else if there are still multiple solutions, add again
