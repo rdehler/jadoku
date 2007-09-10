@@ -10,6 +10,10 @@ public class Jadoku {
 		view = new CommandLineView();
 		board = view.create();
 		view.update();
+		
+		while(view.getInput()){
+			view.update();
+		}
 	}
 
 }
