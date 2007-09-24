@@ -13,8 +13,8 @@ public class Tile {
 	public boolean[] getPossibleValues() {
 		return possibleValues;
 	}
-	public void setPossibleValues(boolean[] possibleValues) {
-		this.possibleValues = possibleValues;
+	public void setValueImpossible(int val){
+		this.possibleValues[val] = false;
 	}
 	public boolean getValuePossible(int value){
 		return possibleValues[value];
@@ -24,6 +24,7 @@ public class Tile {
 	}
 	public void setValue(int value) {
 		this.value = value;
+		this.possibleValues = noPossibleValues();
 	}
 	public boolean valueSet(){
 		return this.value != 0;
@@ -31,7 +32,7 @@ public class Tile {
 	private boolean[] allPossibleValues() {
 		return setAllPossibleValues(true);
 	}
-	private boolean[] noPossiblevalues(){
+	private boolean[] noPossibleValues(){
 		return setAllPossibleValues(false);
 	}
 	private boolean[] setAllPossibleValues(boolean value){
