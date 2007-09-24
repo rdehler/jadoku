@@ -15,4 +15,8 @@ public class Board {
 	public Tile getTileAt(int x, int y){
 		return tiles[y][x];
 	}
+	
+	public void setTile(int x, int y, int val){
+		getTileAt(x,y).setValue(val);
+	}
 }
