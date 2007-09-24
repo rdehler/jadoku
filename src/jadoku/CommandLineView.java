@@ -7,11 +7,15 @@ import java.io.InputStreamReader;
 public class CommandLineView implements View {
 	private Board board;
 	private String command;
+	private Model model;
 	
 	
-	public Board create() {
-		board = new Board();
-		return board;
+	public void setModel(Model model) {
+		this.model = model;
+	}
+
+	public void setBoard(Board board) {
+		this.board = board;
 	}
 
 	public void destroy() {
@@ -45,30 +49,11 @@ public class CommandLineView implements View {
 		try{
 			this.command = br.readLine();
 		} catch (IOException ioe) {
-			System.out.println("IO error trying to read your name!");
+			System.out.println("IO error.");
 			return false;
 		}
-		
-		if(this.command.equals("")){
-			System.out.println("Exiting...");
-			return false;
-		}
-		else{
-			return analyzeCommand(command);
-		}
-		
+
+		return model.analyzeCommand(command);
 	}
 
-	private boolean analyzeCommand(String command) {
-		if(command.equalsIgnoreCase("die") || command.equalsIgnoreCase("exit")){
-			System.out.println("Exiting...");
-			return false;
-		}
-		
-		System.out.println("You entered the command '"+command+"'");
-		//do work here
-		
-		
-		return true;
-	}
 }

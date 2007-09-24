@@ -25,6 +25,9 @@ public class Tile {
 	public void setValue(int value) {
 		this.value = value;
 	}
+	public boolean valueSet(){
+		return this.value != 0;
+	}
 	private boolean[] allPossibleValues() {
 		return setAllPossibleValues(true);
 	}
