@@ -17,6 +17,7 @@ public class Board {
 	}
 	
 	public void setTile(int x, int y, int val) throws InvalidValueException, ImpossibleValueException{
+		System.out.println("x is "+x+" y is "+y);
 		if(val > 9 || val < 1){
 			throw new InvalidValueException();
 		}

@@ -17,6 +17,7 @@ public class Model {
 			int x = command.charAt(1)-48; //ascii '0' == 48
 			int y = command.charAt(2)-48;
 			int val = command.charAt(4)-48;
+			System.out.println("x is "+x+" and y is "+y+" and val is "+val);
 
 			try{
 				board.setTile(x-1, y-1, val);				

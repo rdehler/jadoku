@@ -14,10 +14,10 @@ public class Tile {
 		return possibleValues;
 	}
 	public void setValueImpossible(int val){
-		this.possibleValues[val] = false;
+		this.possibleValues[val-1] = false;
 	}
 	public boolean getValuePossible(int value){
-		return possibleValues[value];
+		return possibleValues[value-1];
 	}
 	public int getValue() {
 		return value;
