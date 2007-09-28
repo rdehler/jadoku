@@ -29,19 +29,20 @@ public class Board {
 		tile.setValue(val);
 		
 		
-		//make this val impossible for all in this row
+		//make this val impossible for all in this col
 		for(int i = 0; i < 9; i++){
 			getTileAt(x,i).setValueImpossible(val);
 		}
-		//make this val impossible for all in this col
+		//make this val impossible for all in this row
 		for(int i = 0; i < 9; i++){
 			getTileAt(i,y).setValueImpossible(val);
 		}
 		//make this val impossible for all in this block
 		int blockX = x/3; //truncates to floor(x/3)
 		int blockY = y/3;
-		for(int i = blockX; i < blockX+3; i++){
-			for(int j = blockY; j < blockY+3; j++){
+		System.out.println("blockX is "+blockX+", blockY is "+blockY);
+		for(int i = 3*blockX; i < 3*blockX+3; i++){
+			for(int j = 3*blockY; j < 3*blockY+3; j++){
 				getTileAt(i,j).setValueImpossible(val);
 			}
 		}
